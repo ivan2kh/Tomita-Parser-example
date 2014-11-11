@@ -1,0 +1,145 @@
+==================== multiwords ====================
+
+августа: TAuxDicArticle, 
+	месяц, 
+июня: TAuxDicArticle, 
+	месяц, 
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+===================== main.cxx =====================
+
+coverage: 4, weight: 0.33555555
+S  ->  WorkHours[*с 10:00 до 18:00] :: 0.35
+    WorkHours  ->  с[*с]  Time[10:00]  AnyWord[до]  Time[18:00] :: 0.35
+    |   
+    |__ с  ->  с :: 1
+    |   
+    |__ Time  ->  AnyWord[*10:00] :: 0.66666666
+    |       AnyWord  ->  10:00 :: 1
+    |   
+    |__ AnyWord  ->  до :: 1
+    |   
+    |__ Time  ->  AnyWord[*18:00] :: 0.66666666
+            AnyWord  ->  18:00 :: 1
+
+coverage: 7, weight: 0.33398692
+S  ->  WorkHours[*в четверг - с 13:00 до 21:00] :: 0.33809523
+    WorkHours  ->  в[*в]  DayOfWeek[четверг]  -[-]  WorkHours[с 13:00 до 21:00] :: 0.33809523
+    |   
+    |__ в  ->  в :: 1
+    |   
+    |__ DayOfWeek  ->  Noun[*четверг]<kwt=день_недели> :: 0.66666666
+    |       Noun  ->  четверг :: 1
+    |   
+    |__ -  ->  - :: 1
+    |   
+    |__ WorkHours  ->  с[*с]  Time[13:00]  AnyWord[до]  Time[21:00] :: 0.35
+        |   
+        |__ с  ->  с :: 1
+        |   
+        |__ Time  ->  AnyWord[*13:00] :: 0.66666666
+        |       AnyWord  ->  13:00 :: 1
+        |   
+        |__ AnyWord  ->  до :: 1
+        |   
+        |__ Time  ->  AnyWord[*21:00] :: 0.66666666
+                AnyWord  ->  21:00 :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.33690476
+S  ->  WorkHours[*с 10:00] :: 0.43333333
+    WorkHours  ->  с[*с]  Time[10:00] :: 0.43333333
+    |   
+    |__ с  ->  с :: 1
+    |   
+    |__ Time  ->  AnyWord[*10:00] :: 0.66666666
+            AnyWord  ->  10:00 :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.33555555
+S  ->  WorkHours[*до 18:00] :: 0.43333333
+    WorkHours  ->  до[*до]  Time[18:00] :: 0.43333333
+    |   
+    |__ до  ->  до :: 1
+    |   
+    |__ Time  ->  AnyWord[*18:00] :: 0.66666666
+            AnyWord  ->  18:00 :: 1
+
+DROPPED OCCURRENCE, coverage: 5, weight: 0.33416666
+S  ->  WorkHours[*в четверг - с 13:00] :: 0.34333333
+    WorkHours  ->  в[*в]  DayOfWeek[четверг]  -[-]  WorkHours[с 13:00] :: 0.34333333
+    |   
+    |__ в  ->  в :: 1
+    |   
+    |__ DayOfWeek  ->  Noun[*четверг]<kwt=день_недели> :: 0.66666666
+    |       Noun  ->  четверг :: 1
+    |   
+    |__ -  ->  - :: 1
+    |   
+    |__ WorkHours  ->  с[*с]  Time[13:00] :: 0.43333333
+        |   
+        |__ с  ->  с :: 1
+        |   
+        |__ Time  ->  AnyWord[*13:00] :: 0.66666666
+                AnyWord  ->  13:00 :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.33416666
+S  ->  WorkHours[*с 13:00] :: 0.43333333
+    WorkHours  ->  с[*с]  Time[13:00] :: 0.43333333
+    |   
+    |__ с  ->  с :: 1
+    |   
+    |__ Time  ->  AnyWord[*13:00] :: 0.66666666
+            AnyWord  ->  13:00 :: 1
+
+DROPPED OCCURRENCE, coverage: 4, weight: 0.33398692
+S  ->  WorkHours[*с 13:00 до 21:00] :: 0.35
+    WorkHours  ->  с[*с]  Time[13:00]  AnyWord[до]  Time[21:00] :: 0.35
+    |   
+    |__ с  ->  с :: 1
+    |   
+    |__ Time  ->  AnyWord[*13:00] :: 0.66666666
+    |       AnyWord  ->  13:00 :: 1
+    |   
+    |__ AnyWord  ->  до :: 1
+    |   
+    |__ Time  ->  AnyWord[*21:00] :: 0.66666666
+            AnyWord  ->  21:00 :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.33398692
+S  ->  WorkHours[*до 21:00] :: 0.43333333
+    WorkHours  ->  до[*до]  Time[21:00] :: 0.43333333
+    |   
+    |__ до  ->  до :: 1
+    |   
+    |__ Time  ->  AnyWord[*21:00] :: 0.66666666
+            AnyWord  ->  21:00 :: 1
+
+
+
+==================== multiwords ====================
+
+в_четверг_-_с_13:00_до_21:00: TAuxDicArticle, 
+	КтоКогда, 
+вторника: TAuxDicArticle, 
+	день_недели, 
+с_10:00_до_18:00: TAuxDicArticle, 
+	КтоКогда, 
+четверг: TAuxDicArticle, 
+	день_недели, 
+
+
+==================== multiwords ====================
+
+
+
